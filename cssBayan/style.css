@@ -33,8 +33,8 @@ body {
     display: block;
     width: 1.5em;
     position: absolute;
-    top: 16%;
     right: 5%;
+    transition: 0.3s;
 }
 
 .bayan-item {
@@ -74,8 +74,5 @@ body {
 
 .bayan-input:checked ~ .kunai {
     display: block;
-    width: 1.5em;
-    position: absolute;
-    top: 3%;
-    right: 5%;
+    transform: rotate(420deg);
 }
