@@ -20,6 +20,15 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1vh;
+    z-index: 1;
+}
+
+p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffd0d0;
 }
 
 .bayan-title {
@@ -36,6 +45,7 @@ body {
     position: absolute;
     right: 5%;
     transition: 0.3s;
+    opacity: 0;
 }
 
 .bayan-item {
@@ -54,11 +64,31 @@ body {
 
 .bayan-item:hover {
     background-color: #661515;
+    transition: all 0.3s ease;
+}
+
+.bayan:hover .kunai {
+    opacity: 1;
+}
+
+.bayan:hover p {
+    color: #ff3737;
+    transition:all 0.6s ease;
+}
+
+.bayan-input:checked ~ * .p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffd0d0;
+    transition:all 0.6s ease;
 }
 
 .bayan-input {
     appearance: none;
     cursor: pointer;
+    position: fixed;
 }
 
 .meme-image {
@@ -67,9 +97,6 @@ body {
     width: 0;
     height: 0;
     opacity: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
 }
 
 .meme-image img {
@@ -77,20 +104,48 @@ body {
 }
 
 .bayan-input:checked ~ .meme-image {
-    overflow: visible;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-}
-
-.bayan-input:checked ~ .kunai {
-    transform: rotate(420deg);
-}
-
-.bayan-title:hover ~ .meme-image {
-    overflow: visible;
     opacity: 1;
     width: 100%;
     height: 100%;
     transition: 0.6s ease;
+}
+
+.bayan-input:checked ~ .kunai {
+    opacity: 1;
+    transform: rotate(420deg);
+}
+
+.bayan-title:hover ~ .meme-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
+
+.bayan-title:hover {
+    height: 33vh;
+    transition:all 0.6s ease;
+}
+
+.meme-image:hover {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
+
+.bayan-title:hover ~ .meme-image img {
+    position: absolute;
+    top: 10%;
+    transition:all 0.6s ease;
+}
+
+.bayan-title:hover ~ .kunai {
+    opacity: 1;
+    transform: rotate(420deg);
+}
+
+.kunai:hover {
+    opacity: 1;
+    transform: rotate(420deg);
 }
