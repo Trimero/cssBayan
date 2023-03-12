@@ -5,7 +5,7 @@ body {
     color: #faebd7;
     background-image: url("./items/bgimage.jpg");
     background-size: 100%;
-    overflow-y: visible;
+    overflow-y: scroll;
     }
 
 .bayan {
@@ -37,6 +37,7 @@ body {
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 39vh;
+    width: 25rem;
 }
 
 .bayan-title {
@@ -160,6 +161,14 @@ body {
 
 
 @media screen and (max-width: 1180px) {
+    
+    .meme-image:active,
+    .bayan-title:active ~ .meme-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
     .bayan {
         max-width: 85vw;
     }
