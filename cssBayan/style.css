@@ -5,7 +5,7 @@ body {
     color: #faebd7;
     background-image: url("./items/bgimage.jpg");
     background-size: 100%;
-    overflow-y: scroll;
+    overflow-y: visible;
     }
 
 .bayan {
