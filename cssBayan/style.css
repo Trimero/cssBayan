@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #faebd7;
+    background-image: url("./items/bgimage.jpg");
+    background-size: 100%;
+    overflow-y: scroll;
+    }
+
+.bayan {
+    display: flex;
+    max-width: 60vw;
+    max-height: 100%;
+    padding: 3vh 0vh;
+    margin: 3em auto;
+    cursor: pointer;
+    border: 0.2em solid #ff3737;
+    border-radius: 1em;
+    background-color: #220f0f;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff3737;
+}
+
+.p_meme {
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 39vh;
+    width: 25rem;
+}
+
+.bayan-title {
+    width: 27vw;
+    max-height: 33vh;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.kunai {
+    display: block;
+    width: 1.5em;
+    position: absolute;
+    right: 5%;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.bayan-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #2b2a2a;
+    color: #ffd0d0;
+    font-size: 1.3em;
+    border: 0.1em solid #fff;
+    border-radius: 1em;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bayan-item:hover {
+    background-color: #661515;
+    transition: all 0.3s ease;
+}
+
+.bayan:hover .kunai {
+    opacity: 1;
+}
+
+.bayan:hover p {
+    color: #ffd0d0;
+    transition:all 0.6s ease;
+}
+
+.bayan-input:checked ~ .bayan-title .p {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffd0d0;
+    transition:all 0.6s ease;
+}
+
+.bayan-input {
+    appearance: none;
+    cursor: pointer;
+    position: fixed;
+}
+
+.meme-image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.meme-image img {
+    max-height: 30vh;
+    max-width: 15vw;
+}
+
+.bayan-input:checked ~ .meme-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s ease;
+}
+
+.bayan-input:checked ~ .kunai {
+    opacity: 1;
+    transform: rotate(420deg);
+}
+
+.meme-image:hover,
+.bayan-title:hover ~ .meme-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
+
+.meme-image:hover {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
+
+.bayan-title:hover ~ .kunai {
+    opacity: 1;
+    transform: rotate(420deg);
+}
+
+.kunai:hover {
+    opacity: 1;
+    transform: rotate(420deg);
+}
+
+.bayan-title:active {
+    cursor: cell;
+}
+
+.bayan-item:active {
+    cursor: cell;
+}
+
+
+@media screen and (max-width: 1180px) {
+    
+    .meme-image:active,
+    .bayan-title:active ~ .meme-image {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition:all 0.6s ease;
+}
+    .bayan {
+        max-width: 85vw;
+    }
+
+    .bayan-title {
+        width: 60vw;
+        max-height: 20vh;
+    }
+    
+    .p {
+        font-size: 1.2em;
+    }
+
+    .p_meme {
+        font-size: 0.8em;
+        color: #ff3737;
+    }   
+}
+
+@media screen and (max-width: 320px) {
+    .p {
+        font-size: 0.5em;
+    }
+
+    .bayan-input:checked ~ .bayan-title .p {
+        margin: 0;
+        font-size: 0.5em;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ffd0d0;
+        transition: all 0.6s ease;
+    }
+
+    .kunai {
+        width: 0.7em;
+    }
+
+    .p_meme {
+        font-size: 0.5em;
+        max-width: 35vh;
+    }
+}
